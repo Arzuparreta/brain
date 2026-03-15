@@ -10,5 +10,4 @@ FILES_DIR = get_brain_data_dir()
 def add_files(name):
     """Stick something to your brain"""
     path = FILES_DIR / f"{name}.md"
-    path.touch()
     subprocess.run([TEXT_EDITOR, str(path)])

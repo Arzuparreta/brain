@@ -1,5 +1,5 @@
 import click
-from commands import add, list, remove
+from commands import add, list, remove, rename
 
 
 @click.group()
@@ -12,6 +12,7 @@ def brain():
 brain.add_command(add.add_files)
 brain.add_command(list.list_files)
 brain.add_command(remove.remove_files)
+brain.add_command(rename.rename_files)
 
 if __name__ == "__main__":
     brain()
