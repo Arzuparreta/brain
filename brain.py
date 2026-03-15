@@ -1,0 +1,17 @@
+import click
+from commands import add, list, remove
+
+
+@click.group()
+def brain():
+    """Your brain in your terminal"""
+    pass
+
+
+# Attatched commands
+brain.add_command(add.add_files)
+brain.add_command(list.list_files)
+brain.add_command(remove.remove_files)
+
+if __name__ == "__main__":
+    brain()
