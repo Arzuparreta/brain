@@ -1,7 +1,8 @@
 import click
 from pathlib import Path
+from config import get_brain_data_dir
 
-NOTES_DIR = Path.home() / ".brain"
+NOTES_DIR = get_brain_data_dir()
 
 
 @click.command(name="remove")
