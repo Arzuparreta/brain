@@ -1,5 +1,6 @@
 import click
-from config import get_brain_data_dir
+import subprocess
+from config import get_brain_data_dir, USER_EDITOR
 
 NOTES_DIR = get_brain_data_dir()
 
@@ -10,4 +11,4 @@ def add_files(name):
     """Stick something to your brain"""
     path = NOTES_DIR / f"{name}.md"
     path.touch()
-    click.echo(f"Added entry: {name}")
+    subprocess.run([USER_EDITOR, str(path)])
