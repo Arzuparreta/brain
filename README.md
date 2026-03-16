@@ -8,8 +8,7 @@ Files directory and text editor are fully configurable at /brain/config.py
 You will not find anything fancy here. This just solves the problem of  
 having to go out of your terminal to read or note something, that's it.
 
-
-## Commands:
+## Commands
 
 ``brain add <file_name>``: Add a new file with the given name. If already  
 exists works like edit.
@@ -18,6 +17,7 @@ exists works like edit.
 does not exist, nothing will happen.
 
 ``brain edit <file_name>``: Open the file with the given name in the  
-configured text editor. If the file does not exist, it will be created first.
+configured text editor. If the file does not exist, root brain  
+directory will be opened in your text editor.
 
 ``brain list``: List all files in the configured directory.
