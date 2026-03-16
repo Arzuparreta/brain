@@ -1,5 +1,5 @@
 import click
-from commands import add, list, remove, rename, edit
+from commands import add, list, remove, rename, edit, edit
 
 
 @click.group()
