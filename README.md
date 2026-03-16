@@ -1,15 +1,11 @@
 # Brain
 
-Brain is the ultra simple CLI I use to manage a plain list of .md files of  
-any kind.
+Brain is the ultra simple CLI I use to manage a plain list of .md files of any kind.
 It just adds, removes, edit and list .md files in a directory.
 Files directory and text editor are fully configurable at /brain/config.py
 
-You will not find anything fancy here. This just solves the problem of having  
-to go out of your terminal to read or note something, that's it.
-There's no built support for files tree structure. This is intended for a  
-plain list of files, so if you need something more complex, this is not the  
-right tool for you.
+You will not find anything fancy here. This just solves the problem of having to go out of your terminal to read or note something, that's it.
+There's no built support for files tree structure. This is intended for a plain list of files, so if you need something more complex, this is not the right tool for you.
 
 ## Commands:
 
