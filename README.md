@@ -11,7 +11,7 @@ There's no built support for files tree structure. This is intended for a
 plain list of files, so if you need something more complex, this is not the  
 right tool for you.
 
-[## Commands:]
+## Commands:
 
 ``brain add <file_name>``: Add a new file with the given name. If already  
 exists works like edit.
