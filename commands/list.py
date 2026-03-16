@@ -1,5 +1,5 @@
 import click
-from config import get_brain_data_dir
+from logic import get_brain_data_dir
 
 FILES_DIR = get_brain_data_dir()
 

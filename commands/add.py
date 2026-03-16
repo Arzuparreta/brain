@@ -1,6 +1,7 @@
 import click
 import subprocess
-from config import get_brain_data_dir, TEXT_EDITOR
+from config import TEXT_EDITOR
+from logic import get_brain_data_dir
 
 FILES_DIR = get_brain_data_dir()
 
