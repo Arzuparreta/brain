@@ -6,7 +6,8 @@ of any kind. It just adds, removes, edit and list .md files in a directory.
 Files directory and text editor are fully configurable at /brain/config.py
 
 You will not find anything fancy here. This just solves the problem of  
-having to go out of your terminal to read or note something, that's it.
+having to get out of your terminal (if you use an in-terminal editor) to  
+read or note something, that's it.
 
 ## Commands
 ``brain edit <file_name>``: Open the file with the given name in the  
