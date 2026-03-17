@@ -3,7 +3,7 @@
 Brain is the ultra simple **CLI** that I use to **manage** a plain **list of .md** files  
 of any kind. It just adds, removes, edit and list .md files in a directory.
 
-Files directory and text editor are fully configurable at /brain/config.py
+Files directory and text editor are fully configurable at /brain/settings.json
 
 You will not find anything fancy here. This just solves the problem of  
 having to get out of your terminal instance to read or note something,  
