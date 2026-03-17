@@ -1,9 +1,8 @@
 import click
-import subprocess
-from settings import settings
 
-editor = settings["TEXT_EDITOR"]
-dir = settings["FILES_DIR"]
+import subprocess
+
+from logic import editor, dir
 
 
 @click.command(name="edit")

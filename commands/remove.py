@@ -1,14 +1,13 @@
 import click
-from logic import get_brain_data_dir
 
-FILES_DIR = get_brain_data_dir()
+from logic import dir
 
 
 @click.command(name="remove")
 @click.argument("name")
 def remove_files(name):
     """Delete something from your brain"""
-    path = FILES_DIR / f"{name}.md"
+    path = dir / f"{name}.md"
     if path.exists():
         path.unlink()
         click.echo(f"{name} was deleted.")

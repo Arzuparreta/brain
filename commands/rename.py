@@ -1,8 +1,8 @@
-import os
-from settings import settings
 import click
 
-dir = settings["FILES_DIR"]
+import os
+
+from logic import dir
 
 
 @click.command(name="rename")

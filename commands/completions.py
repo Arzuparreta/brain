@@ -1,9 +1,10 @@
-from config import FILES_DIR
 import click
+
+from logic import dir
 
 
 @click.command(hidden=True, name="complete_files")
 def complete_files():
     """Return filenames for fish completion"""
-    for f in FILES_DIR.glob("*.md"):
+    for f in dir.glob("*.md"):
         print(f.stem)

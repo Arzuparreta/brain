@@ -1,5 +1,11 @@
+from settings import settings
 import click
 from config import FILES_DIR
+
+
+editor = settings["TEXT_EDITOR"]
+extension = settings["NOTE_EXTENSION"]
+dir = settings["FILES_DIR"]
 
 
 def get_brain_data_dir():
