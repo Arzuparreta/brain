@@ -1,3 +1,4 @@
+from settings import settings
 import click
 from commands import add, list, remove, rename, edit, install_completions, completions
 
@@ -5,7 +6,6 @@ from commands import add, list, remove, rename, edit, install_completions, compl
 @click.group()
 def brain():
     """Your brain in your terminal"""
-    pass
 
 
 # Attatched commands
