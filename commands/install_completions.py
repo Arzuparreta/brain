@@ -11,8 +11,7 @@ function __brain_complete_files
 end
 
 complete -c brain -f
-complete -c brain -n "__fish_use_subcommand" -a "edit"
-complete -c brain -n "__fish_use_subcommand" -a "remove"
+complete -c brain -n "__fish_use_subcommand" -a "edit add list remove"
 complete -c brain -n "__fish_seen_subcommand_from edit remove" -a "(__brain_complete_files)"
 """
 
