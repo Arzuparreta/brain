@@ -6,13 +6,14 @@ def install_completions():
     import pathlib
 
     completion = """
-function __brain_complete_edit
-    brain complete_edit
+function __brain_complete_files
+    brain complete_files
 end
 
 complete -c brain -f
 complete -c brain -n "__fish_use_subcommand" -a "edit"
-complete -c brain -n "__fish_seen_subcommand_from edit" -a "(__brain_complete_edit)"
+complete -c brain -n "__fish_use_subcommand" -a "remove"
+complete -c brain -n "__fish_seen_subcommand_from edit remove" -a "(__brain_complete_files)"
 """
 
     path = pathlib.Path.home() / ".config/fish/completions/brain.fish"
