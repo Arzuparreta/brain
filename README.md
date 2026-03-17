@@ -1,6 +1,6 @@
 # Brain
 
-Brain is the ultra simple CLI that I use to manage a plain list of .md files  
+Brain is the ultra simple **CLI** that I use to **manage** a plain **list of .md** files  
 of any kind. It just adds, removes, edit and list .md files in a directory.
 
 Files directory and text editor are fully configurable at /brain/config.py
