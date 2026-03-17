@@ -1,6 +1,8 @@
 import os
-from config import FILES_DIR
+from settings import settings
 import click
+
+dir = settings["FILES_DIR"]
 
 
 @click.command(name="rename")
@@ -8,8 +10,8 @@ import click
 @click.argument("new_name")
 def rename_files(old_name, new_name):
     """Rename something from your brain."""
-    old_path = FILES_DIR / f"{old_name}.md"
-    new_path = FILES_DIR / f"{new_name}.md"
+    old_path = dir / f"{old_name}.md"
+    new_path = dir / f"{new_name}.md"
     try:
         os.rename(old_path, new_path)
     except Exception:
