@@ -1,3 +1,5 @@
+# Optional reference: after ./scripts/setup.sh, Fish loads completions from
+# ~/.config/fish/completions/brain.fish (absolute path to bin/brain).
 function __brain_complete_files
     brain complete_files
 end
