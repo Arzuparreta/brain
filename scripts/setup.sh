@@ -8,7 +8,7 @@ INSTALL_SHELL=1
 
 for arg in "$@"; do
     case "$arg" in
-        --no-path|--no-shell) INSTALL_SHELL=0 ;;
+        --no-path) INSTALL_SHELL=0 ;;
         -h|--help)
             echo "Usage: ./scripts/setup.sh [--no-path]"
             echo "  Creates .venv, installs dependencies, configures your shell PATH, and (if Fish is"

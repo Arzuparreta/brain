@@ -8,7 +8,7 @@ from brain.paths import brain_root
 
 @click.command(name="install_completions")
 def install_completions():
-    """Re-install Fish completions (same file as setup.sh). Uses absolute path to bin/brain."""
+    """Write Fish completions to ~/.config/fish/completions/."""
     brain_exec = brain_root() / "bin" / "brain"
     q = str(brain_exec).replace("'", "'\\''")
     subcommands = " ".join(FISH_SUBCOMMANDS)
