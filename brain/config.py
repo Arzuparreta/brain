@@ -1,12 +1,14 @@
 #################################################
 # Do not configure anything in this file;       #
-# instead, go to /settings.json in the root dir.#
+# use settings.json at the Brain repo root.     #
 #################################################
 
 from pathlib import Path
 
-# directory for brain data
-FILES_DIR = Path(__file__).parent.resolve() / "brain_data"
+from brain.paths import brain_root
+
+# directory for brain data (under Brain repo root)
+FILES_DIR = brain_root() / "brain_data"
 
 # default note extension
 NOTE_EXTENSION = "md"

@@ -2,7 +2,7 @@ import shlex
 import subprocess
 from pathlib import Path
 
-from settings import settings
+from brain.settings import settings
 
 
 def notes_dir() -> Path:

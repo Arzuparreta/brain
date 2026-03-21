@@ -2,7 +2,7 @@ import subprocess
 
 import click
 
-from logic import note_path, notes_dir, open_in_editor
+from brain.logic import note_path, notes_dir, open_in_editor
 
 
 @click.command(name="edit")

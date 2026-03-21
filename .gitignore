@@ -1,3 +1,7 @@
 brain_data
 __pycache__
 /.tmp_home
+.venv/
+*.egg-info
+dist/
+build/

@@ -1,6 +1,6 @@
 import click
 
-from logic import note_path
+from brain.logic import note_path
 
 
 @click.command(name="remove")

@@ -2,8 +2,8 @@ import subprocess
 
 import click
 
-from logic import note_path, open_in_editor
-from settings import settings
+from brain.logic import note_path, open_in_editor
+from brain.settings import settings
 
 
 @click.command(name="add")

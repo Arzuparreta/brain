@@ -2,11 +2,12 @@ import pathlib
 
 import click
 
-from constants import FISH_SUBCOMMANDS
+from brain.constants import FISH_SUBCOMMANDS
 
 
 @click.command(name="install_completions")
 def install_completions():
+    """Install Fish completions under ~/.config (not portable; prefer repo brain.fish)."""
     subcommands = " ".join(FISH_SUBCOMMANDS)
     completion = f"""
 function __brain_complete_files

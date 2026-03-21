@@ -1,7 +1,7 @@
 import click
 
-from logic import notes_dir
-from settings import settings
+from brain.logic import notes_dir
+from brain.settings import settings
 
 
 @click.command(hidden=True, name="complete_files")

@@ -1,6 +1,6 @@
 import click
 
-from logic import notes_dir
+from brain.logic import notes_dir
 
 
 @click.command(name="list")
