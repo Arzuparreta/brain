@@ -14,6 +14,7 @@ from brain.commands import (
 
 
 @click.group()
+@click.version_option(package_name="brain")
 @click.pass_context
 def cli(ctx):
     """Your brain in your terminal"""
