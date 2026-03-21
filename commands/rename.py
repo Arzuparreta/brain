@@ -1,8 +1,6 @@
 import click
 
-import os
-
-from logic import dir
+from logic import note_path
 
 
 @click.command(name="rename")
@@ -10,14 +8,15 @@ from logic import dir
 @click.argument("new_name")
 def rename_files(old_name, new_name):
     """Rename something from your brain."""
-    old_path = dir / f"{old_name}.md"
-    new_path = dir / f"{new_name}.md"
+    old_path = note_path(old_name)
+    new_path = note_path(new_name)
+    ext = new_path.suffix
     try:
-        os.rename(old_path, new_path)
-    except Exception:
-        pass
-    # Check
-    if os.path.exists(new_path):
-        print(f"File renamed to {new_name}.md")
-    else:
-        print("Failed to rename file.")
+        old_path.rename(new_path)
+    except FileNotFoundError:
+        click.echo("Failed to rename file.")
+        return
+    except OSError:
+        click.echo("Failed to rename file.")
+        return
+    click.echo(f"File renamed to {new_name}{ext}")

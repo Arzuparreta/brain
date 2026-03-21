@@ -1,10 +1,12 @@
 import click
 
-from logic import dir
+from logic import notes_dir
+from settings import settings
 
 
 @click.command(hidden=True, name="complete_files")
 def complete_files():
     """Return filenames for fish completion"""
-    for f in dir.glob("*.md"):
+    pattern = f"*.{settings['NOTE_EXTENSION']}"
+    for f in notes_dir().glob(pattern):
         print(f.stem)

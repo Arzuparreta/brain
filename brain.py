@@ -1,6 +1,6 @@
-from settings import settings
-
 import click
+
+import logic
 
 from commands import (
     add,
@@ -15,11 +15,13 @@ from commands import (
 
 
 @click.group()
-def brain():
+@click.pass_context
+def brain(ctx):
     """Your brain in your terminal"""
+    if ctx.invoked_subcommand is not None:
+        logic.ensure_notes_dir()
 
 
-# Attatched commands
 brain.add_command(add.add_files)
 brain.add_command(list.list_files)
 brain.add_command(remove.remove_files)

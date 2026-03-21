@@ -1,23 +1,26 @@
+import pathlib
+
 import click
+
+from constants import FISH_SUBCOMMANDS
 
 
 @click.command(name="install_completions")
 def install_completions():
-    import pathlib
-
-    completion = """
+    subcommands = " ".join(FISH_SUBCOMMANDS)
+    completion = f"""
 function __brain_complete_files
     brain complete_files
 end
 
 complete -c brain -f
-complete -c brain -n "__fish_use_subcommand" -a "edit add list remove rename see"
+complete -c brain -n "__fish_use_subcommand" -a "{subcommands}"
 complete -c brain -n "__fish_seen_subcommand_from edit remove see" -a "(__brain_complete_files)"
 complete -c brain -n "__fish_seen_subcommand_from rename" -a "(__brain_complete_files)"
 """
 
     path = pathlib.Path.home() / ".config/fish/completions/brain.fish"
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(completion)
+    path.write_text(completion.lstrip())
 
     click.echo(f"Installed fish completion at {path}")

@@ -1,12 +1,12 @@
 import click
 
-from logic import dir
+from logic import notes_dir
 
 
 @click.command(name="list")
 def list_files():
     """List your brain files"""
-    files = [f.name for f in dir.iterdir() if f.is_file()]
+    files = [f.name for f in notes_dir().iterdir() if f.is_file()]
     if not files:
         click.echo("Your brain is empty.")
     else:
