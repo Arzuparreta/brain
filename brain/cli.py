@@ -18,7 +18,7 @@ from brain.commands import (
 @click.version_option(package_name="brain")
 @click.pass_context
 def cli(ctx):
-    """Your brain in your terminal"""
+    """| Your brain in your terminal. |"""
     if ctx.invoked_subcommand is not None:
         logic.ensure_notes_dir()
 

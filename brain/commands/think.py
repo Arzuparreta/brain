@@ -15,7 +15,7 @@ def _format_report(edges, unresolved, all_stems) -> str:
         by_source[e.source][e.kind].append(e.target)
 
     for src in sorted(by_source.keys()):
-        lines.append(f"## {src}")
+        lines.append(f"// {src}")
         wiki = sorted(set(by_source[src]["wiki"]))
         auto = sorted(set(by_source[src]["auto"]))
         if wiki:
@@ -26,7 +26,7 @@ def _format_report(edges, unresolved, all_stems) -> str:
             lines.append("  (no outgoing links)")
         lines.append("")
 
-    lines.append("## Unresolved wikilinks")
+    lines.append("(Dev) Unresolved wikilinks")
     if not unresolved:
         lines.append("  (none)")
     else:
