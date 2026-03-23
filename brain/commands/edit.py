@@ -1,12 +1,8 @@
 import subprocess
 
-import click
-
 from brain.logic import note_path, notes_dir, open_in_editor
 
 
-@click.command(name="edit")
-@click.argument("name", required=False)
 def edit_files(name):
     """Edit the brain data files."""
     notes = notes_dir()
@@ -21,4 +17,4 @@ def edit_files(name):
     try:
         open_in_editor(target, check=check)
     except subprocess.CalledProcessError as e:
-        click.echo(f"Error opening editor: {e}")
+        print(f"Error opening editor: {e}")

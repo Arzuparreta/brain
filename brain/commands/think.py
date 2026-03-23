@@ -1,5 +1,3 @@
-import click
-
 from brain import logic
 from brain.links.graph import build_graph
 from brain.settings import settings
@@ -36,9 +34,8 @@ def _format_report(edges, unresolved, all_stems) -> str:
     return "\n".join(lines).rstrip() + "\n"
 
 
-@click.command(name="think")
 def think():
     """List links between notes (wikilinks + word multiset)."""
     ext = settings["NOTE_EXTENSION"]
     edges, unresolved, stems = build_graph(logic.notes_dir(), ext)
-    click.echo(_format_report(edges, unresolved, stems), nl=False)
+    print(_format_report(edges, unresolved, stems), end="")

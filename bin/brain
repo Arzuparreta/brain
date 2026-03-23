@@ -3,9 +3,5 @@ set -eu
 HERE=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
 ROOT=$(CDPATH= cd -- "$HERE/.." && pwd)
 export BRAIN_ROOT="$ROOT"
-PY="$ROOT/.venv/bin/python"
-if [ ! -x "$PY" ]; then
-    echo "brain: no venv at .venv — run: ./scripts/setup.sh" >&2
-    exit 1
-fi
-exec "$PY" -m brain "$@"
+export PYTHONPATH="$ROOT${PYTHONPATH:+:$PYTHONPATH}"
+exec python3 -m brain "$@"
