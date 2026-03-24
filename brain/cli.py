@@ -36,33 +36,33 @@ def main():
 
     parser = argparse.ArgumentParser(
         prog="brain",
-        description="| Your brain in your terminal. |",
+        description="| Your brain in your terminal |",
     )
     parser.add_argument("--version", action="version", version=f"brain {__version__}")
 
     sub = parser.add_subparsers(dest="command")
 
-    sub.add_parser("add", help="stick something to your brain.").add_argument("name")
+    sub.add_parser("add", help="stick something to your brain").add_argument("name")
 
-    p_edit = sub.add_parser("edit", help="edit the brain data files.")
+    p_edit = sub.add_parser("edit", help="edit the brain data files")
     p_edit.add_argument("name", nargs="?", default=None)
 
-    sub.add_parser("list", help="list your brain files.")
+    sub.add_parser("list", help="list your brain files")
 
-    sub.add_parser("remove", help="delete something from your brain.").add_argument(
+    sub.add_parser("remove", help="delete something from your brain").add_argument(
         "name"
     )
 
-    p_rename = sub.add_parser("rename", help="rename something from your brain.")
+    p_rename = sub.add_parser("rename", help="rename something from your brain")
     p_rename.add_argument("old_name")
     p_rename.add_argument("new_name")
 
-    sub.add_parser("see", help="print file content to the terminal.").add_argument(
+    sub.add_parser("see", help="print file content to the terminal").add_argument(
         "name"
     )
 
-    sub.add_parser("think", help="list links between notes.")
-    sub.add_parser("setup", help="set up completions and global brain command support.")
+    sub.add_parser("think", help="list links between notes")
+    sub.add_parser("setup", help="set up completions and global brain command support")
 
     args = parser.parse_args()
 
