@@ -1,69 +1,20 @@
 # Brain
 
 Brain is the ultra simple **CLI** that I use to **manage** a plain **list of .md** files  
-of any kind. It just adds, removes, edit and list .md files in a directory.
+of any kind. It just adds, removes, edits and lists .md files in a directory.
 
 You will not find anything fancy here. This just solves the problem of  
 having to get out of your terminal instance to read or note something,  
 that's it.
 
-## Requirements
+Python 3.10 or newer. No external dependencies. No pip install. No venv.
 
-- Python 3.10+
+Run `bin/brain` using a full path from wherever you are (`…/brain/bin/brain list`), or `./bin/brain` when your shell is already in the repo.
 
-No external dependencies. No pip install. No venv.
+If you want to type `brain` instead of the path, run `./bin/brain setup` once. It adds this repo's `bin` to your PATH for Fish, zsh, or bash, and on Fish it installs tab completions. `scripts/setup.sh` does the same thing. Then open a new terminal or source your shell config.
 
-## Usage
+For `add`, `edit`, `see`, `remove`, and `rename`, pass the note **name** only — not `something.md`. The extension comes from `settings.json` (default `md`). `edit` with no name opens the notes folder in your editor. `think` shows links between notes if you use wiki-style links. The rest is in `brain --help`.
 
-Run directly from the repo:
+Notes sit in `brain_data/`. `settings.json` next to `pyproject.toml` is for the editor command and note extension if you do not want the defaults.
 
-```bash
-./bin/brain list
-```
-
-Or with an absolute path from anywhere:
-
-```bash
-/path/to/brain/bin/brain list
-```
-
-### Set up `brain`
-
-Run setup once to configure completions and support using `brain` as a bare command from any directory:
-
-```bash
-./bin/brain setup
-```
-
-Then open a new terminal (or reload your shell config) and use `brain` from anywhere.
-
-Editor and note extension are configurable in `settings.json` at the repo root  
-(next to `pyproject.toml`).
-
-## Commands
-
-``brain add <file_name>``: Add a new file with the given name. If already  
-exists works like edit.
-
-``brain edit <file_name>``: Open the file with the given name in the  
-configured text editor. If the file does not exist, root brain  
-directory will be opened in your text editor.
-
-``brain list``: List all files in the configured directory.
-
-``brain remove <file_name>``: Remove the file with the given name. If the file  
-does not exist, nothing will happen.
-
-``brain rename <old> <new>``: Rename a file.
-
-``brain see <file_name>``: Print a file to the terminal.
-
-``brain think``: List links between notes (wikilinks + word multiset).
-
-``brain setup``: Set up shell PATH integration and Fish tab completions.
-
-## Shared / multi-machine use
-
-The `brain` directory can live on a shared drive (e.g. Samba). Each machine  
-only needs `python3` installed. Notes in `brain_data/` are shared; no  
-machine-specific runtime files are written to the repo.
+If the repo lives on a shared drive, the markdown goes with it. Each machine still needs Python; PATH and completions from `setup` are per machine.
