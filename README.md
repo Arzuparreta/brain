@@ -3,7 +3,7 @@
 Brain is the ultra simple **CLI** that I use to **manage** a plain **list of .md** files  
 of any kind. It just adds, removes, edit and list .md files in a directory.
 
-You will not find anything fancy here. This just solves my problem of having to get out of a terminal instance to read or note something, that's it.
+You will not find anything fancy here. This just solves my problem of having to get out of a terminal instance to read or note something, and lets me have <<dockerized>> notes using an existant samba share, for example.
 
 ## Requirements
 
