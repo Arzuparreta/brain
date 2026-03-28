@@ -2,7 +2,7 @@
 
 Brain is an ultra simple CLI that I use to manage a plain list of .md files  
 of any kind. You can add, remove, edit and list .md files in a directory.
-Wikilinks are automatically detected, in a way that any naturally mentioned reference to another note, as long as you don't mistype the name, will be recollected to optionally calculate the connections with the command ``think`.
+Wikilinks are automatically detected, in a way that any naturally mentioned reference to another note, as long as you don't mistype the name, will be recollected to optionally calculate the connections with the command ``think``.
 
 You will not find anything fancy here. This just solves my problem of having to get out of a terminal instance to read or note something, and lets me have "dockerized" notes using an existant samba share, for example.
 
